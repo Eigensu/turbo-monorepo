@@ -23,7 +23,12 @@ pnpm build
 pnpm lint
 pnpm type-check
 pnpm format
+pnpm format:check
 ```
+
+Commits automatically run Prettier and ESLint on staged files, followed by a
+workspace type-check. Pull requests and pushes run the same checks plus the
+production build through GitHub Actions.
 
 ## Layout
 

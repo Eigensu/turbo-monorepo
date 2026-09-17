@@ -25,7 +25,9 @@ export default function HealthCheck() {
 
       setResult((await response.json()) as HealthResponse);
     } catch {
-      setError('Backend unavailable. Start the API on port 4000 and try again.');
+      setError(
+        'Backend unavailable. Start the API on port 4000 and try again.',
+      );
     }
   }
 
