@@ -22,13 +22,28 @@ Run the other workspace tasks with:
 pnpm build
 pnpm lint
 pnpm type-check
+pnpm test
+pnpm test:e2e
 pnpm format
 pnpm format:check
 ```
 
 Commits automatically run Prettier and ESLint on staged files, followed by a
 workspace type-check. Pull requests and pushes run the same checks plus the
-production build through GitHub Actions.
+test suites and the production build through GitHub Actions.
+
+## Tests
+
+The backend is covered by Jest. Unit specs live beside the code they cover in
+`apps/backend/src`, and end-to-end specs live in `apps/backend/test`, where
+supertest drives the running Nest application over HTTP.
+
+```bash
+pnpm --filter backend test          # unit specs
+pnpm --filter backend test:watch    # unit specs, watch mode
+pnpm --filter backend test:cov      # unit specs with coverage
+pnpm --filter backend test:e2e      # end-to-end specs
+```
 
 ## Layout
 

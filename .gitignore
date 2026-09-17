@@ -8,3 +8,4 @@ dist
 !.env.example
 *.tsbuildinfo
 pnpm-debug.log*
+coverage
