@@ -1,10 +1,8 @@
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import base from '@repo/eslint-config/base';
 
-export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+export default [
+  ...base,
   {
     ignores: ['.next/**'],
   },
-);
+];

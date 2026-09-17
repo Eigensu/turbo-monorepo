@@ -34,4 +34,5 @@ production build through GitHub Actions.
 
 - `apps/backend`: NestJS service on port 4000
 - `apps/web`: Next.js frontend on port 3000
+- `packages/eslint-config`: shared ESLint flat config
 - `packages/tsconfig`: shared TypeScript compiler settings
