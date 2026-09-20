@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "nest start --watch",
+    "dev": "node ../../scripts/with-env.mjs nest start --watch",
     "build": "nest build",
-    "start": "node dist/main",
+    "start": "node ../../scripts/with-env.mjs node dist/main",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "type-check": "tsc --noEmit",
     "test": "jest",
